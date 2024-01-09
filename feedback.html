@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jio Service Feedback Form</title>
+<style>
+  body {
+    margin:0;
+    padding: 0;
+    background-image: url(image_1);
+    background-size:cover;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-image:url("https://wallpapercave.com/wp/wp2919299.jpg");
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  h2{
+    text-align: center;
+  }
+  label {
+    font-weight: bold;
+  }
+  input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h2>Jio Service Feedback Form</h2>
+  <form id="feedbackForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your Name" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+    
+    <label for="feedbackType">Feedback Type:</label>
+    <select id="feedbackType" name="feedbackType" required>
+      <option value="excellent">Excellent</option>
+      <option value="very good">Very Good</option>
+      <option value="good">Good</option>
+      <option value="bad">Bad</option>
+    </select>
+    
+    <label for="comments">Comments:</label>
+    <textarea id="comments" name="comments" rows="4" placeholder="Enter your opinion.." required></textarea>
+    
+    <button type="submit">Submit Feedback</button>
+    <button type="reset">Reset</button>
+  </form>
+</div>
+<script>
+  document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    // You can add code here to process and handle the form data
+    // For this example, we'll just display an alert
+    alert('Feedback submitted successfully!');
+    
+    // You can also use AJAX to send the form data to a server for further processing
+  });
+</script>
+</body>
+</html>
+
